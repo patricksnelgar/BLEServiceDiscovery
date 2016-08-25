@@ -17,14 +17,15 @@ import java.util.ArrayList;
  */
 public class DeviceAdapter extends ArrayAdapter<DiscoveredDevice> {
 
-    public DeviceAdapter(Context context, ArrayList<DiscoveredDevice> devices){
+    public DeviceAdapter(Context context, ArrayList<DiscoveredDevice> devices) {
         super(context, 0, devices);
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         DiscoveredDevice mDevice = getItem(position);
 
-        if(convertView == null){
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.bluetooth_device, parent, false);
         }
 

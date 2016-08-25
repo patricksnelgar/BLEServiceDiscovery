@@ -15,7 +15,7 @@ public class DiscoveredDevice {
     public String address;
     public BluetoothDevice btDevice;
 
-    public DiscoveredDevice(String name, boolean bonded, String icon, String address, BluetoothDevice device){
+    public DiscoveredDevice(String name, boolean bonded, String icon, String address, BluetoothDevice device) {
         this.name = name;
         this.bondedDevice = bonded;
         this.icon = icon;
@@ -25,9 +25,9 @@ public class DiscoveredDevice {
 
     @Override
     public boolean equals(Object o) {
-        if(o instanceof DiscoveredDevice){
+        if (o instanceof DiscoveredDevice) {
             DiscoveredDevice a = (DiscoveredDevice) o;
-            if(this.address.equals(a.address)) {
+            if (this.address.equals(a.address)) {
                 //Log.i(TAG, "Address match");
                 //MAC addresses are unique (unless spoofed) so able to be used as identifier.
                 return true;
